@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Notify } from 'notiflix';
+//import { Notify } from 'notiflix';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AppWrapper } from './App.slyled';
@@ -22,15 +22,6 @@ export function App() {
   const [largeImg, setLargeImg] = useState('');
   const [tags, setTags] = useState('');
   const [totalPages, setTotalPages] = useState(0);
-
-  // The first rendering of homepage
-  useEffect(() => {
-    Notify.info('Please start searching', {
-      timeout: 4000,
-      fontSize: '20px',
-      position: 'center-center',
-    });
-  }, []);
 
   // The rendering of page after searching
   useEffect(() => {
